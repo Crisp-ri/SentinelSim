@@ -1,4 +1,4 @@
----
+# SintenelSim
 
 **SentinelSim** is a local security analysis platform designed to simulate cyber attacks and detect suspicious activity in real time.
 
@@ -43,8 +43,6 @@ Frontend:
 ---
 
 # Architecture
-
----
 
 The system follows a modular pipeline:
 
