@@ -46,11 +46,11 @@ Frontend:
 
 The system follows a modular pipeline:
 
-Data Source → Detection Engine → Database → Dashboard
+Data Sources → Ingestion/Normalization → Detection → Storage → Dashboard
 
 
 Detailed architecture documentation is available in the docs directory.
 
 # Project structure
 
-(docs/)[docs/] - project documntation
+(docs/)[docs/] - project documentation

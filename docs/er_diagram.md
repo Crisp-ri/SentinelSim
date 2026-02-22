@@ -60,11 +60,17 @@ Stores aggregated statistics per IP address.
 
 Fields:
 
-- ip (Primary Key)
+- ip (PK)
 
-- total_events (total number of events from IP)
+- total_events
 
-- suspicious_score (calculated risk score)
+- suspicious_score
+
+- first_seen
+
+- last_seen
+
+- updated_at
 
 ---
 

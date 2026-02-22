@@ -10,11 +10,13 @@ The simulator generates controlled test traffic and synthetic events that imitat
 
 In traffic mode, the simulator produces real HTTP requests against local services to generate authentic system logs.
 
-It consists of five independent modules:
+It consists of six independent modules:
 
 - Attack Simulator
 
 - API Layer
+
+- Log ingestion Layer
 
 - Detection Engine
 
