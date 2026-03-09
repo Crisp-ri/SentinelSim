@@ -1,10 +1,10 @@
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 from typing import Optional
+from pydantic import BaseModel, ConfigDict, Field, IPvAnyAddress
 
-from pydantic import BaseModel, Field
 
-class EventType(Enum):
+class EventType(StrEnum):
     port_scan = "port_scan"
     brute_force = "brute_force"
     ddos_spike = "ddos_spike"
@@ -14,15 +14,13 @@ class EventType(Enum):
 
 class EventCreate(BaseModel):
     timestamp: Optional[datetime] = None
-    source_ip: str = Field(..., min_length=7, max_length=45)
+    source_ip: IPvAnyAddress
     target: str
-    port: int
-    event_type: EventType
+    port: int = Field(..., ge=1, le=65535)
+    event_type: EventType = Field(...)
     payload: str
     ingestion_source: str
 
 class EventRead(EventCreate):
-    id: int = Field(..., example=1)
-
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
+    id: int = Field(...)
