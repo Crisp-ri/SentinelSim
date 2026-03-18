@@ -1,0 +1,9 @@
+BRUTEFORCE_DELAY = 0.3  # seconds
+ENDPOINTS = ["/event"]
+SOURCE_IP = "192.168.1.101"
+PORT = 8000
+PAYLOAD = "failed login attempt"
+ATTEMPTS = 50
+
+TARGET_IP = "192.168.1.100"
+API_BASE_URL = f"http://127.0.0.1:{PORT}"
