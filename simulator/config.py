@@ -1,5 +1,5 @@
 BRUTEFORCE_DELAY = 0.3  # seconds
-ENDPOINT = "/event"
+ENDPOINT = "/events"
 SOURCE_IP = "192.168.1.101"
 TARGET_PORT = 8000
 PAYLOAD = "failed login attempt"

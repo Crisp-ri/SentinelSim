@@ -11,3 +11,5 @@ def bruteforce(delay: Annotated[float, typer.Option()] = config.BRUTEFORCE_DELAY
     print(f"Brute-force simulation completed with {attempts} attempts, delay of {delay} seconds, targeting IP {target_ip}.")
 
 
+if __name__ == "__main__":
+    app()
